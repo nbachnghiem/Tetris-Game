@@ -1,0 +1,108 @@
+html, body {
+    height: 100%;
+    background-color: rgb(141, 141, 141);
+    font-family: 'Roboto', sans-serif; 
+    background-image: url(images/Main_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body > img {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+.container {
+    display: flex;
+}
+
+.board_outline {
+    width: 510px;
+    height: 890px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-image: url("images/blossoms.jpg");
+    background-size: cover;
+    border: 20px solid rgb(255, 255, 255);
+    box-shadow: 10px 12px 10px rgb(75, 75, 75);
+    border-radius: 1%;
+    position: relative;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 410px;
+    margin: 0 auto;
+    background-image: url("images/board_background.jpg");
+    background-size: contain;
+    background-position: center;
+}
+
+.board .box {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 188, 213, 0.6);
+    border: 2px solid rgb(255, 255, 255);
+    margin: 1px;
+}
+
+.score {
+    text-align: center;
+    font-size: 65px;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px #919191,
+    2px 1px 5px rgb(110, 110, 110),
+    2px 2px 5px rgb(110, 110, 110),
+    2px 3px 5px rgb(110, 110, 110),
+    2px 4px 5px rgb(110, 110, 110),
+    2px 5px 5px rgb(110, 110, 110),
+    2px 6px 5px rgb(110, 110, 110),
+    2px 7px 5px rgb(110, 110, 110),
+    1px 12px 6px rgba(16,16,16,0.4),
+    1px 16px 10px rgba(16,16,16,0.2),
+    1px 19px 35px rgba(16,16,16,0.2),
+    1px 24px 60px rgba(16,16,16,0.4);
+}
+
+.next_block_container {
+    position: absolute;
+    top: -10px;
+    left: calc(100% + 30px);
+}
+
+.next_block_container .next_block:nth-child(1){
+    width: 140px;
+    height: 100px;
+}
+.next_block_container .next_block {
+    border: 5px solid white;
+    box-shadow: 2px 2px 7px #5e5e5e,
+    4px 3px 7px rgb(34, 34, 34);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 120px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background-image: url(images/Dot.png);
+    background-size: cover;
+}
+
+.next_block_container .next_block > p {
+    color: white;
+    font-size: 35px;
+    transform: rotate(-15deg);
+    text-shadow: 2px 2px 2px #5a5a5a,
+    4px 1px 5px rgb(46, 46, 46);
+    position: absolute;
+    top: -40px;
+    left: -10px;
+}
+.next_block_container .next_block > img {
+    width: 90px;
+    margin: 0 auto;
+}
