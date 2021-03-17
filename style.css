@@ -41,7 +41,7 @@ body > img {
 .board .box {
     width: 35px;
     height: 35px;
-    background-color: rgba(255, 188, 213, 0.6);
+    background-color: rgba(255, 159, 196, 0.6);
     border: 2px solid rgb(255, 255, 255);
     margin: 1px;
 }
@@ -53,17 +53,13 @@ body > img {
     font-weight: 900;
     color: whitesmoke;
     text-shadow: 1px 1px 1px #919191,
-    2px 1px 5px rgb(110, 110, 110),
-    2px 2px 5px rgb(110, 110, 110),
-    2px 3px 5px rgb(110, 110, 110),
-    2px 4px 5px rgb(110, 110, 110),
-    2px 5px 5px rgb(110, 110, 110),
-    2px 6px 5px rgb(110, 110, 110),
-    2px 7px 5px rgb(110, 110, 110),
-    1px 12px 6px rgba(16,16,16,0.4),
-    1px 16px 10px rgba(16,16,16,0.2),
-    1px 19px 35px rgba(16,16,16,0.2),
-    1px 24px 60px rgba(16,16,16,0.4);
+    2px 1px 5px rgb(75, 75, 75),
+    2px 2px 5px rgb(75, 75, 75),
+    2px 3px 5px rgb(75, 75, 75),
+    2px 4px 5px rgb(75, 75, 75),
+    2px 5px 5px rgb(75, 75, 75),
+    2px 6px 5px rgb(75, 75, 75),
+    2px 7px 5px rgb(75, 75, 75);
 }
 
 .next_block_container {
