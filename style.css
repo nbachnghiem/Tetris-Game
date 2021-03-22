@@ -44,6 +44,9 @@ body > img {
     background-color: rgba(255, 159, 196, 0.6);
     border: 2px solid rgb(255, 255, 255);
     margin: 1px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .score {
