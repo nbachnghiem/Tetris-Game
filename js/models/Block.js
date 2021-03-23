@@ -41,22 +41,46 @@ class Block {
         this.direction = newDirection;
     }
 
-    canGo() {
-        let canGoLeft = true;
-        let canGoRight = true;
-        let canGoDown = true;
-        if(this.area1[1] === 0 || this.area2[1] === 0 || this.area3[1] === 0 || this.area4[1] === 0)
-            canGoLeft = false;
-        if(this.area1[1] === Board.cols - 1 || this.area2[1] === Board.cols - 1 || this.area3[1] === Board.cols - 1 || this.area4[1] === 9)
-            canGoRight = false;
-        if(this.area1[0] === Board.rows - 1 || this.area2[0] === Board.rows - 1 || this.area3[0] === Board.rows - 1 || this.area4[0] === Board.rows - 1)
-            canGoDown = false;
-        return {
-            canGoLeft,
-            canGoRight,
-            canGoDown
-        }
-    }
+    canGoLeft() {}
+
+    canGoRight() {}
+
+    canGoDown() {}
+
+    // canGo() {
+    //     let canGoLeft = true;
+    //     let canGoRight = true;
+    //     let canGoDown = true;
+    //     if(this.area1[1] === 0 || this.area2[1] === 0 || this.area3[1] === 0 || this.area4[1] === 0
+    //         || (this.direction === directions.TOP
+    //             &&  Board.occupiedBoxes.includes(this.area1[0] + "-" + (this.area1[1] - 1))
+    //             ||  Board.occupiedBoxes.includes(this.area2[0] + "-" + (this.area2[1] - 1))
+    //         )
+    //         || (this.direction === directions.LEFT
+    //             &&  Board.occupiedBoxes.includes(this.area1[0] + "-" + (this.area1[1] - 1))
+    //             ||  Board.occupiedBoxes.includes(this.area2[0] + "-" + (this.area2[1] - 1))
+    //             ||  Board.occupiedBoxes.includes(this.area4[0] + "-" + (this.area4[1] - 1))
+    //         )
+    //         || (this.direction === directions.BOTTOM
+    //             &&  Board.occupiedBoxes.includes(this.area1[0] + "-" + (this.area1[1] - 1))
+    //             ||  Board.occupiedBoxes.includes(this.area4[0] + "-" + (this.area4[1] - 1))
+    //         )
+    //         || (this.direction === directions.RIGHT
+    //             &&  Board.occupiedBoxes.includes(this.area2[0] + "-" + (this.area2[1] - 1))
+    //             ||  Board.occupiedBoxes.includes(this.area3[0] + "-" + (this.area3[1] - 1))
+    //             ||  Board.occupiedBoxes.includes(this.area4[0] + "-" + (this.area4[1] - 1))
+    //         ))
+    //         canGoLeft = false;
+    //     if(this.area1[1] === Board.cols - 1 || this.area2[1] === Board.cols - 1 || this.area3[1] === Board.cols - 1 || this.area4[1] === 9)
+    //         canGoRight = false;
+    //     if(this.area1[0] === Board.rows - 1 || this.area2[0] === Board.rows - 1 || this.area3[0] === Board.rows - 1 || this.area4[0] === Board.rows - 1)
+    //         canGoDown = false;
+    //     return {
+    //         canGoLeft,
+    //         canGoRight,
+    //         canGoDown
+    //     }
+    // }
 
     calculateXY(areaN, dirX, dirY) {
         return [areaN[0] + dirX, areaN[1] + dirY];
@@ -71,7 +95,7 @@ class Block {
     }
 
     goLeft() {
-        if(!this.canGo().canGoLeft) return;
+        if(!this.canGoLeft()) return;
         this.refresh();
         this.setArea(
             this.calculateXY(this.area1, 0, -1),
@@ -83,7 +107,7 @@ class Block {
     }
 
     goRight() {
-        if(!this.canGo().canGoRight) return;
+        if(!this.canGoRight()) return;
         this.refresh();
         this.setArea(
             this.calculateXY(this.area1, 0, 1),
@@ -95,7 +119,7 @@ class Block {
     }
 
     goDown() {
-        if(!this.canGo().canGoDown) return;
+        if(!this.canGoDown()) return;
         this.refresh();
         this.setArea(
             this.calculateXY(this.area1, 1, 0),

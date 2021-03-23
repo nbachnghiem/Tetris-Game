@@ -1,6 +1,7 @@
 class Board {
     static rows = 20;
     static cols = 10;
+    static occupiedBoxes = [];
 
     render() {
         for (let x = 0; x < Board.rows; x++) {

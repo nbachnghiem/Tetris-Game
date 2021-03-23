@@ -1,4 +1,5 @@
 html, body {
+    margin: 0;
     height: 100%;
     background-color: rgb(141, 141, 141);
     font-family: 'Roboto', sans-serif; 
